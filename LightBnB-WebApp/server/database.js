@@ -136,7 +136,7 @@ exports.getAllReservations = getAllReservations;
   }
 
   if (options.owner_id) {
-    queryParams.push(`%${options.owner_id}%`);
+    queryParams.push(options.owner_id);
     queryString += ` AND properties.owner_id = $${queryParams.length} `;
   }
 
